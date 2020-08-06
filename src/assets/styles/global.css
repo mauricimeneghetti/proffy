@@ -1,0 +1,72 @@
+:root {
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842C2;
+    --color-secundary: #04D361;
+    --color-secundary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+  
+    font-size: 60%;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* padding e etc conta na altura e largura do elemento */
+  }
+
+  html, body, #root {
+      height: 100vh; /* A página ocupe 100% da altura total da tela */
+  }
+
+  body {
+      background: var(--color-background);
+  }
+
+  #root { /* Pra sempre trazer tudo pro centro */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Fonte nova do Google Fonts pro body e pros q tem fonte própria
+  1.6rem = 60% maior q o normal. Ótimo para responsividade! 
+  Se um dia precisar mudar o tamanho do font size de tudo é só mudar o font-size 
+  1rem = 16 pixels, com o root 60% fica 1rem = 9.6px*/
+  body,
+  input,
+  button,
+  textarea {
+      font: 500 1.6rem Poppins;
+      color: var(--color-text-base)
+  }
+
+  /* Container vai ser o elemento mais ao centro com 90% do tamanho da tela
+  mas que nunca pode passar de 700px
+  */
+  .container {
+      width: 90vw;
+      max-width: 700px;
+  }
+
+  /* Cria um media query
+  Em dispositivos com uma largura de no mínimo 700px
+  Aumento a fonte pra 62.5% pra converter 1rem pra 10px
+  */
+  @media (min-width: 700px) {
+      :root {
+          font-size: 62.5%;
+      }
+  }
